@@ -8,7 +8,7 @@
 
     @if(Session::has('mensaje'))
         <div class="alert alert-info">
-            {{ Session::get('mensaje') }}
+            {{Session::get('mensaje')}}
         </div>
     @endif
 
