@@ -11,7 +11,7 @@ class EmpleadoController extends Controller
     
     public function index()
     {
-        $listado['Empleados'] = empleado::paginate(5);
+        $listado['Empleados'] = empleado::paginate(2);
 
         return view('Empleados.index', $listado);
     }
@@ -101,7 +101,9 @@ class EmpleadoController extends Controller
 
         empleado::where('id', '=', $id)->update($datos);
         $empleado = empleado::findOrFail($id);
-        return view('Empleados.update', compact('empleado'));
+
+        return redirect('Empleados')->with('mensaje', 'Registro editado correctamente');
+
     }
 
     /**

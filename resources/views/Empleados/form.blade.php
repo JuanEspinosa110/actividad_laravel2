@@ -42,9 +42,9 @@
 <div class="mb-3">
     <input type="text" 
            class="form-control"
-           value="{{ isset($empleado->correo) ? $empleado->correo : old('Correo') }}" 
-           name="Correo" 
-           id="Correo" 
+           value="{{ isset($empleado->correo) ? $empleado->correo : old('correo') }}" 
+           name="correo" 
+           id="correo" 
            placeholder="Introduzca Email">
 </div>
 

@@ -9,6 +9,8 @@
     @if(Session::has('mensaje'))
         <div class="alert alert-info">
             {{Session::get('mensaje')}}
+        </div>
+    @endif
 
     <table class="table table-bordered table-hover text-center align-middle">
         <thead class="table-dark">
@@ -38,7 +40,7 @@
                 <td>{{ $datos->Nombres }}</td>
                 <td>{{ $datos->PrimerApel }}</td>
                 <td>{{ $datos->SegundoApel }}</td>
-                <td>{{ $datos->Email }}</td>
+                <td>{{ $datos->correo }}</td>
 
                 <td>
                     <a href="{{ url('/Empleados/'.$datos->id.'/edit') }}" 
@@ -64,6 +66,7 @@
             @endforeach
         </tbody>
     </table>
+    {!! $Empleados->Links() !!}
 
 </div>
 @endsection
