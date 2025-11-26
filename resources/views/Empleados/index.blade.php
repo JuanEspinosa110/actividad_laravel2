@@ -9,8 +9,6 @@
     @if(Session::has('mensaje'))
         <div class="alert alert-info">
             {{Session::get('mensaje')}}
-        </div>
-    @endif
 
     <table class="table table-bordered table-hover text-center align-middle">
         <thead class="table-dark">
@@ -32,6 +30,7 @@
 
                 <td>
                     <img src="{{asset('storage').'/'.$datos->foto}}" 
+
                          class="img-thumbnail"
                          style="width: 120px; height:120px; object-fit:cover;">
                 </td>
